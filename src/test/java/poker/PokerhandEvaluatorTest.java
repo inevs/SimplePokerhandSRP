@@ -17,6 +17,12 @@ public class PokerhandEvaluatorTest {
 	}
 
 	@Test
+	public void findsHighcardIgnoringColor() {
+		assertThat(evaluator.evaluate("H2 C3"), equalTo("C3"));
+	}
+
+
+	@Test
 	public void findsHighcardWith10() throws Exception {
 		assertThat(evaluator.evaluate("C4 C10"), equalTo("C10"));
 	}
